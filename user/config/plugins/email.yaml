@@ -1,0 +1,15 @@
+enabled: true
+from: gael.buchy@icloud.com
+to: gaelfr67@gmail.com
+mailer:
+  engine: smtp
+  smtp:
+    server: mailtrap.io
+    port: 2525
+    encryption: none
+    user: 391b52c646c955
+    password: c7cb253d4be209
+  sendmail:
+    bin: /usr/sbin/sendmail
+content_type: text/html
+debug: false

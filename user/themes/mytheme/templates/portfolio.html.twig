@@ -1,0 +1,36 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set collection = page.collection() %}
+{% set base_url = page.url %}
+{% set feed_url = base_url %}
+
+{% if base_url == '/' %}
+  {% set base_url = '' %}
+{% endif %}
+
+{% if base_url == base_url_relative %}
+  {% set feed_url = base_url~'/'~page.slug %}
+{% endif  %}
+
+{% block content %}
+
+<div class="portfolio-grid">
+  {% for child in collection %}
+    {% if loop.index is odd %}
+      <div class="row">
+    {% endif %}
+      <div class="col col-6">
+        <a href="{{ child.url }}">
+          <img src="{{ (child.media.images|first).url }}" alt="{{ child.title }}">
+
+          <div class="hover-back"><div class="image-title h3">{{ child.title }}</div></div>
+        </a>
+      </div>
+     {% if loop.index is even %}
+      </div>
+    {% endif %}
+  {% endfor %}
+{% endblock %}
+
+
+
