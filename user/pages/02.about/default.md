@@ -1,5 +1,6 @@
 ---
 title: About
+published: false
 background_color: 'rgba(220, 227, 184, 1.00)'
 route: about
 ---

@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+body {
+  font-family: 'Source Sans Pro', sans-serif; }
+
+h1.title, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Source Sans Pro', sans-serif; }
+
+button, .button {
+  font-family: 'Source Sans Pro', sans-serif; }
+
+input, textarea, select {
+  font-family: 'Source Sans Pro', sans-serif; }
+
+@font-face {
+  font-family: 'ElliotSans';
+  src: url("../fonts/ElliotSans-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'ElliotSansMedium';
+  src: url("../fonts/ElliotSans-Medium.ttf") format("truetype"); }
+@font-face {
+  font-family: 'ElliotSansBold';
+  src: url("../fonts/ElliotSans-Bold.ttf") format("truetype"); }
+@font-face {
+  font-family: 'ElliotSansBoldI';
+  src: url("../fonts/ElliotSans-BoldItalic.ttf") format("truetype"); }
+/** GENERAL **/
+body {
+  background: white;
+  transition: background-color 1s;
+  -webkit-transition: background-color 1s;
+  /* Safari */ }
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%); }
+
+a {
+  transition: color .2s;
+  color: black;
+  text-decoration: none; }
+
+a:link,
+a:hover {
+  color: grey; }
+
+a:active {
+  transition: color .2s; }
+
+.container {
+  max-width: 1610px;
+  margin: 0px auto; }
+
+.container-inner {
+  padding: 15px; }
+  @media (min-width: 768px) {
+    .container-inner {
+      padding: 35px 5% 25px 5%; } }
+
+/** HEADER - MENU **/
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1; }
+
+@media (min-width: 768px) {
+  .js .nav-collapse {
+    position: relative; }
+
+  .js .nav-collapse.closed {
+    max-height: none; } }
+#header {
+  background: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  position: fixed;
+  width: 100%;
+  z-index: 999; }
+  #header h2, #header li.h2 {
+    font-family: ElliotSans; }
+  #header .nav-collapse.opened {
+    max-height: 9999px; }
+  #header .nav-toggle {
+    float: right; }
+    #header .nav-toggle i {
+      line-height: 40px; }
+    #header .nav-toggle i:before {
+      content: "\e906"; }
+    #header .nav-toggle.active i:before {
+      content: "\e905"; }
+  @media (min-width: 768px) {
+    #header .menu ul li {
+      display: inline; }
+      #header .menu ul li a {
+        margin-left: 40px; }
+    #header .nav-toggle {
+      display: none; } }
+  @media (max-width: 768px) {
+    #header h2 {
+      margin-bottom: 0; } }
+
+.main-page-container {
+  padding-top: 80px; }
+  @media (min-width: 768px) {
+    .main-page-container {
+      padding-top: 120px; } }
+
+@media (min-width: 768px) {
+  footer .contact {
+    text-align: right; } }
+@media (max-width: 768px) {
+  footer .address {
+    margin-bottom: 10px; } }
+
+/** DEFAULT **/
+.main-content {
+  font-size: 21px;
+  line-height: 32px; }
+
+/** PORTFOLIO **/
+.portfolio-grid .col {
+  padding: 6px; }
+  .portfolio-grid .col a {
+    display: block;
+    position: relative;
+    border: 1px solid black;
+    height: 100%;
+    text-align: center; }
+    .portfolio-grid .col a img {
+      vertical-align: bottom; }
+    .portfolio-grid .col a .hover-back {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      background: black;
+      width: 100%;
+      height: 100%;
+      transition: opacity .2s; }
+      .portfolio-grid .col a .hover-back .image-title {
+        position: relative;
+        float: left;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white; }
+    .portfolio-grid .col a:hover .hover-back {
+      opacity: 1; }
+
+body.home-page {
+  background: #c4d3d7; }
+  body.home-page, body.home-page a {
+    color: #c14426; }
+  body.home-page .centered {
+    width: 100%; }
+  body.home-page .title {
+    font-family: ElliotSansBold;
+    font-size: 100px;
+    line-height: 100px;
+    text-align: center; }
+    body.home-page .title i {
+      font-family: ElliotSansBoldI; }
+  body.home-page .contact {
+    padding-top: 25px;
+    font-family: ElliotSansMedium;
+    font-size: 30px;
+    line-height: 32px; }
+    body.home-page .contact > span a {
+      margin-right: 20px; }
+    body.home-page .contact > span img {
+      width: 30px;
+      height: 30px; }
+    body.home-page .contact > span img, body.home-page .contact > span span {
+      vertical-align: middle; }
+    @media (max-width: 768px) {
+      body.home-page .contact {
+        padding: 30px;
+        text-align: center; } }
+
+.spinner {
+  margin: 100px auto 0;
+  width: 70px;
+  text-align: center; }
+  .spinner > div {
+    width: 18px;
+    height: 18px;
+    background-color: #c14426;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both; }
+  .spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s; }
+  .spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s; }
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0); }
+  40% {
+    -webkit-transform: scale(1); } }
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+/*# sourceMappingURL=template.css.map */

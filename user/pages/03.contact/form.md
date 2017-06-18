@@ -1,5 +1,6 @@
 ---
 title: Contact
+published: false
 background_color: '#cc9595'
 menu: Contact
 form:

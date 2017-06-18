@@ -37,6 +37,6 @@ class __TwigTemplate_6ad22ad01e5feba7bc5a3fbed23ecd5cff514acbcdb8646795adb0ae72d
 
     public function getSourceContext()
     {
-        return new Twig_Source("", "empty.html.twig", "/Users/gael/Sites/gael.local/grav/mysite/user/plugins/admin/themes/grav/templates/empty.html.twig");
+        return new Twig_Source("", "empty.html.twig", "/Users/gael/Sites/gael.local/grav/now-here/user/plugins/admin/themes/grav/templates/empty.html.twig");
     }
 }

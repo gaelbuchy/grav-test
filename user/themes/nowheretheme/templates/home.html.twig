@@ -1,0 +1,31 @@
+{% extends 'partials/base.html.twig' %}
+
+
+{% block header %}
+{% endblock %}
+
+{% block body %}
+	<div class="centered">
+	<div class="row">
+	    <div class="col col-6 title">Now-<br><i>&nbsp;&nbsp;Here.</i></div>
+	    <div class="col col-6 contact">
+	    	Contacto:<br>
+	    	Celular: {{ site.contact.phone }}<br>
+	    	Correo: <a href="mailto:estudionow.here@gmail.com">{{ site.contact.email }}</a><br>
+	    	<span class="socials"><a target="_blank" href="{{ page.header.facebook }}" class="fb"><img alt="nowhere-facebook" src="{{ url("theme://assets/fb.png") }}"></a><a target="_blank" href="{{ page.header.instagram }}" class="in"><img alt="nowhere-instagram" src="{{ url("theme://assets/in.png") }}"></a> <span>{{ page.header.id }}</span></span>
+	    </div>
+	</div>
+	<div class="row">
+	    <div class="col col-12">
+	    	<div class="spinner">
+			  <div class="bounce1"></div>
+			  <div class="bounce2"></div>
+			  <div class="bounce3"></div>
+			</div>
+	    </div>
+	</div>
+	</div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

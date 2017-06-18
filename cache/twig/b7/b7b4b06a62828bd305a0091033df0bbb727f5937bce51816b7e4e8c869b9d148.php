@@ -361,6 +361,6 @@ class __TwigTemplate_d8498a6576358d9163a0af3adbadb8a84e05e9d6e46327cb84066e7449a
         {%- endif -%}
     </div>
 {% endblock %}
-", "dashboard.html.twig", "/Users/gael/Sites/gael.local/grav/mysite/user/plugins/admin/themes/grav/templates/dashboard.html.twig");
+", "dashboard.html.twig", "/Users/gael/Sites/gael.local/grav/now-here/user/plugins/admin/themes/grav/templates/dashboard.html.twig");
     }
 }

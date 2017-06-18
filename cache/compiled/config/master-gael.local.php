@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1493310852,
-    'checksum' => '0999bc19f9b58381fefd0ed8e6bcef51',
+    'timestamp' => 1497821889,
+    'checksum' => 'dece3a0aefb5dccbe350ab9910a8641e',
     'files' => [
         'user/config' => [
             'media' => [
@@ -11,7 +11,7 @@ return [
             ],
             'plugins/email' => [
                 'file' => 'user/config/plugins/email.yaml',
-                'modified' => 1493247280
+                'modified' => 1497820382
             ],
             'security' => [
                 'file' => 'user/config/security.yaml',
@@ -19,7 +19,7 @@ return [
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1493244094
+                'modified' => 1497821641
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
@@ -27,7 +27,7 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1493310851
+                'modified' => 1497821431
             ]
         ],
         'system/config' => [
@@ -55,7 +55,7 @@ return [
             ],
             'plugins/email' => [
                 'file' => 'user/plugins/email/email.yaml',
-                'modified' => 1491996730
+                'modified' => 1497820284
             ],
             'plugins/error' => [
                 'file' => 'user/plugins/error/error.yaml',
@@ -63,11 +63,15 @@ return [
             ],
             'plugins/form' => [
                 'file' => 'user/plugins/form/form.yaml',
-                'modified' => 1493156147
+                'modified' => 1497820292
+            ],
+            'plugins/ganalytics' => [
+                'file' => 'user/plugins/ganalytics/ganalytics.yaml',
+                'modified' => 1497821889
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/login.yaml',
-                'modified' => 1493156152
+                'modified' => 1497820289
             ],
             'plugins/markdown-notices' => [
                 'file' => 'user/plugins/markdown-notices/markdown-notices.yaml',
@@ -75,7 +79,7 @@ return [
             ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/problems.yaml',
-                'modified' => 1491996730
+                'modified' => 1497820299
             ]
         ]
     ],
@@ -135,8 +139,8 @@ return [
             ],
             'email' => [
                 'enabled' => true,
-                'from' => 'gael.buchy@icloud.com',
-                'from_name' => NULL,
+                'from' => 'estudionow.here@gmail.com',
+                'from_name' => ' Estudio Now-Here',
                 'to' => 'gaelfr67@gmail.com',
                 'to_name' => NULL,
                 'mailer' => [
@@ -176,16 +180,34 @@ return [
                     ]
                 ]
             ],
+            'ganalytics' => [
+                'enabled' => true,
+                'trackingId' => '',
+                'position' => 'head',
+                'objectName' => 'ga',
+                'forceSsl' => false,
+                'async' => false,
+                'anonymizeIp' => false,
+                'blockedIps' => [
+                    
+                ],
+                'cookieConfig' => false,
+                'cookieName' => '_ga',
+                'cookieDomain' => '',
+                'cookieExpires' => 63072000,
+                'debugStatus' => false,
+                'debugTrace' => false
+            ],
             'login' => [
                 'enabled' => true,
                 'built_in_css' => true,
                 'route' => NULL,
                 'redirect_after_login' => NULL,
-                'route_register' => false,
                 'route_activate' => '/activate_user',
                 'route_forgot' => '/forgot_password',
                 'route_reset' => '/reset_password',
                 'route_profile' => '/user_profile',
+                'route_register' => '/user_register',
                 'parent_acl' => false,
                 'protect_protected_page_media' => false,
                 'user_registration' => [
@@ -495,11 +517,11 @@ return [
             ]
         ],
         'site' => [
-            'title' => 'My Site',
-            'default_lang' => 'en',
+            'title' => 'Now-here',
+            'default_lang' => 'es',
             'author' => [
-                'name' => 'Joe Bloggs',
-                'email' => 'joe@test.com',
+                'name' => 'NowHere',
+                'email' => 'estudionow.here@gmail.com',
                 'url' => 'www.google.fr'
             ],
             'taxonomies' => [
@@ -507,7 +529,7 @@ return [
                 1 => 'tag'
             ],
             'metadata' => [
-                'description' => 'Grav is an easy to use, yet powerful, open source flat-file CMS'
+                'description' => 'Estudio Now Here'
             ],
             'summary' => [
                 'enabled' => true,
@@ -524,8 +546,8 @@ return [
                 'address' => 'Suite 306
 37 Swanston Street
 Melbourne VIC 3000',
-                'phone' => 3333,
-                'email' => 'dedewde@gmail.fr'
+                'phone' => '(999) 114-6345',
+                'email' => 'estudionow.here@gmail.com'
             ],
             'social' => [
                 'instagram' => 'dedwed.fr'
@@ -577,11 +599,11 @@ Melbourne VIC 3000',
                 'override_locale' => false
             ],
             'home' => [
-                'alias' => '/works',
+                'alias' => '/home',
                 'hide_in_urls' => false
             ],
             'pages' => [
-                'theme' => 'mytheme',
+                'theme' => 'nowheretheme',
                 'order' => [
                     'by' => 'default',
                     'dir' => 'asc'
@@ -630,7 +652,7 @@ Melbourne VIC 3000',
                 'etag' => false,
                 'vary_accept_encoding' => false,
                 'redirect_default_route' => false,
-                'redirect_default_code' => 301,
+                'redirect_default_code' => '301',
                 'redirect_trailing_slash' => true,
                 'ignore_files' => [
                     0 => '.DS_Store'
@@ -690,7 +712,7 @@ Melbourne VIC 3000',
                 ]
             ],
             'errors' => [
-                'display' => true,
+                'display' => '1',
                 'log' => true
             ],
             'debugger' => [

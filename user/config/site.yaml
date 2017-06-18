@@ -1,14 +1,24 @@
-title: My Site
+title: Now-here
+default_lang: es
 author:
-  name: Joe Bloggs
-  email: 'joe@test.com'
-  url: 'www.google.fr' 
+  name: NowHere
+  email: estudionow.here@gmail.com
+  url: www.google.fr
+taxonomies:
+  - category
+  - tag
+metadata:
+  description: 'Estudio Now Here'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+blog:
+  route: /blog
 contact:
   address: "Suite 306\n37 Swanston Street\nMelbourne VIC 3000"
-  phone: +3333
-  email: dedewde@gmail.fr
+  phone: (999) 114-6345
+  email: estudionow.here@gmail.com
 social:
   instagram: dedwed.fr
-metadata:
-    description: 'Grav is an easy to use, yet powerful, open source flat-file CMS'
-

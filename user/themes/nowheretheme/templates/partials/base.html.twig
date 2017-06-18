@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="{{ grav.language.getLanguage ?: 'es' }}">
+<head>
+    {% block head %}
+        <meta charset="utf-8" />
+        <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
+        {% include 'partials/metadata.html.twig' %}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/png" href="{{ url('theme://img/favicon.png') }}" />
+
+        {% block javascripts %}
+            {% do assets.add('jquery',101) %}
+            {% do assets.addJs('theme://js/kube.min.js') %}
+            {% do assets.addJs('theme://js/responsive-nav.min.js') %}
+            {% do assets.addJs('theme://js/custom.js') %}
+        {% endblock %}
+        {{ assets.js() }}
+        {% block stylesheets %}
+            {% do assets.addCss('theme://css/kube.min.css') %}
+            {% do assets.addCss('theme://css/responsive-nav.css') %}
+            {% do assets.addCss('theme://css/font-awesome.min.css') %}
+            {% do assets.addCss('theme://css-compiled/template.css') %}
+        {% endblock %}
+        {{ assets.css() }}
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+        {% endblock head%}
+    </head>
+    <body class="{{ page.header.body_classes }}">
+
+        {% block header %}
+        <div id="header">
+            <div class="container">
+                <div class="container-inner">
+                    <div class="row">                
+                        <div class="col col-4">
+                            <a class="nav-toggle" href="#"><i class="kube- h3"></i></a>
+                            <a class="logo" href="{{ base_url_absolute }}"><h2>{{ site.title }}</h2></a>
+                        </div>
+                        <div class="col col-8 text-right menu">{% include 'partials/navigation.html.twig' %}</div>
+                    </div>        
+                </div>
+            </div>
+        </div>  
+        {% endblock %}
+
+
+        {% block body %}
+
+            <div class="container main-page-container">
+                <div class="container-inner">                    
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+
+        {% endblock %}
+
+        {% block footer %}
+        <footer>
+            <div class="container">
+                <div class="container-inner"> 
+                    <div class="row h3">                
+                        <div class="col col-6 address">                            
+                            {{ site.contact.address|nl2br }}                            
+                        </div>
+
+                        <div class="col col-6 contact">
+                            <ul class="unstyled">
+                                <li>{{ site.contact.phone }}</li>
+                                <li>{{ site.contact.email }}</li>
+                                <li>{{ site.social.instagram }}</li>
+                            </ul>                                                                     
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+          var nav = responsiveNav(".nav-collapse", {
+            customToggle: ".nav-toggle"
+          });
+
+            {% set background = page.header.background_color|default(white) %}
+          $('body').css('background-color', '{{ background }}');
+        </script>
+
+        {% endblock %}
+
+    </body>
+</html>

@@ -78,6 +78,6 @@ class __TwigTemplate_98429d81baa16c1b48049514b48d8035accde737b2bcce5e6db6322042c
         </div>
     </a>
 </div>
-", "partials/nav-user-details.html.twig", "/Users/gael/Sites/gael.local/grav/mysite/user/plugins/admin/themes/grav/templates/partials/nav-user-details.html.twig");
+", "partials/nav-user-details.html.twig", "/Users/gael/Sites/gael.local/grav/now-here/user/plugins/admin/themes/grav/templates/partials/nav-user-details.html.twig");
     }
 }

@@ -1336,6 +1336,6 @@ $context["p"], "published", array())) ? (($this->env->getExtension('Grav\Plugin\
     {% include 'partials/admin-pro-pages-addons.html.twig' ignore missing %}
 
 {% endblock %}
-", "pages.html.twig", "/Users/gael/Sites/gael.local/grav/mysite/user/plugins/admin/themes/grav/templates/pages.html.twig");
+", "pages.html.twig", "/Users/gael/Sites/gael.local/grav/now-here/user/plugins/admin/themes/grav/templates/pages.html.twig");
     }
 }

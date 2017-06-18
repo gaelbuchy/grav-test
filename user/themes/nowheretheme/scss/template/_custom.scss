@@ -1,0 +1,267 @@
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+@include text-font("'Source Sans Pro', sans-serif");
+@include headings-font("'Source Sans Pro', sans-serif");
+@include buttons-font("'Source Sans Pro', sans-serif");
+@include inputs-font("'Source Sans Pro', sans-serif");
+
+@font-face {
+  font-family: 'ElliotSans';
+  src: url('../fonts/ElliotSans-Regular.ttf') format('truetype')
+}
+@font-face {
+  font-family: 'ElliotSansMedium';
+  src: url('../fonts/ElliotSans-Medium.ttf') format('truetype')
+}
+@font-face {
+  font-family: 'ElliotSansBold';
+  src: url('../fonts/ElliotSans-Bold.ttf') format('truetype')
+}
+@font-face {
+  font-family: 'ElliotSansBoldI';
+  src: url('../fonts/ElliotSans-BoldItalic.ttf') format('truetype')
+}
+
+
+/** GENERAL **/
+body{ 
+	background: white;
+    transition: background-color 1s;
+    -webkit-transition: background-color 1s; /* Safari */
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+a {
+  transition: color .2s;
+  color: black;
+  text-decoration: none;
+}
+
+a:link,
+// a:visited { color: black; }
+a:hover   { color: grey; }
+a:active  {
+  transition: color .2s;
+  // color: #007BE6;
+}
+
+.container{
+	max-width: 1610px;
+    margin: 0px auto;
+}
+
+.container-inner{
+	padding: 15px;
+	@include breakpoint(768px) {
+		padding: 35px 5% 25px 5%;
+	}
+}
+
+/** HEADER - MENU **/
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+// min-width
+@include breakpoint(768px) {
+	.js .nav-collapse {
+		position: relative;
+	}
+	.js .nav-collapse.closed {
+		max-height: none;
+	}
+}
+
+#header{
+	background: white;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+
+	h2, li.h2{
+		font-family: ElliotSans;
+	}
+
+	.nav-collapse.opened {
+	  max-height: 9999px;
+	}
+
+	.nav-toggle{
+		float: right;
+		i{
+			line-height: 40px;
+		}
+		i:before {
+  			content: "\e906"; 
+  		}
+  		&.active{
+  			i:before {
+  				content: "\e905"; 
+  			}
+  		}
+	}
+	// min-width
+	@include breakpoint(768px) {
+		.menu{
+			ul{
+				li{
+	    			display: inline;
+	    			a{
+	    				margin-left: 40px;
+	    			}
+				}
+			}
+		}
+		.nav-toggle {
+			display: none;
+		}
+	}
+
+	@include breakpoint(sm) {
+		h2{
+			margin-bottom: 0;
+		}
+	}
+}
+
+.main-page-container{
+	padding-top: 80px;
+	@include breakpoint(768px) {
+		padding-top: 120px;
+	}
+}
+
+
+
+footer{
+	.contact{
+		@include breakpoint(768px) {
+			text-align: right;
+		}
+	}
+	.address{
+		@include breakpoint(sm) {		
+			margin-bottom: 10px;
+		}
+	}
+}
+/** DEFAULT **/
+
+.main-content{
+	font-size: 21px;
+  	line-height: 32px;
+}
+
+
+/** PORTFOLIO **/
+.portfolio-grid {
+    
+    .col{
+    	// display: block;
+    	padding: 6px;
+    	a{
+    		display: block;
+    		position: relative;
+    		border: 1px solid black;
+    		height: 100%;
+    		text-align: center;
+
+    		img{
+    			vertical-align: bottom;
+    		}
+    		
+    		.hover-back{
+			    opacity: 0;
+			    position: absolute;
+			    top: 0;
+			    background: black;
+			    width: 100%;
+			    height: 100%;
+			    transition: opacity .2s;
+
+			    .image-title{
+			    	position: relative;
+					float: left;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					color: white
+			    }
+    		}		
+    		
+    		&:hover{
+    			.hover-back{
+    				opacity: 1;
+    			}
+    		}
+    	}
+    }
+}
+
+
+body{
+
+    &.home-page{
+    	background: #c4d3d7;
+    	&, a {
+    		color: #c14426;
+    	}
+
+
+    	.centered{
+    		width: 100%;
+    	}
+
+    	.title{
+			font-family: ElliotSansBold;
+			font-size: 100px;
+			line-height: 100px;
+			text-align: center;
+
+			i {
+				font-family: ElliotSansBoldI;
+			}
+			// padding-right: 100px;
+    	}
+
+    	.contact{
+    		padding-top: 25px;
+    		// padding-left: 100px;
+    		font-family: ElliotSansMedium;
+    		font-size: 30px;
+    		line-height: 32px;
+
+    		& > span {
+    			a{
+    				margin-right: 20px;
+    			}
+    			img {
+    				width: 30px;
+    				height: 30px;
+    			}
+    			img, span{
+    				vertical-align: middle;
+    			}
+    		}
+
+    		@media (max-width: 768px) {
+    			padding: 30px;
+    			text-align: center;
+			}
+    	}
+    }
+}
+

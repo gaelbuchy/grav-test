@@ -75,6 +75,6 @@ class __TwigTemplate_6ae33b9ae016e68f26a202d3ba80b6dc75592318824c78259feb0b7f4bb
     </div>
 </div>
 
-", "partials/dashboard-feed.html.twig", "/Users/gael/Sites/gael.local/grav/mysite/user/plugins/admin/themes/grav/templates/partials/dashboard-feed.html.twig");
+", "partials/dashboard-feed.html.twig", "/Users/gael/Sites/gael.local/grav/now-here/user/plugins/admin/themes/grav/templates/partials/dashboard-feed.html.twig");
     }
 }

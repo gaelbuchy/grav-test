@@ -1,0 +1,27 @@
+title: Home
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        advanced:
+          fields:
+            columns:
+              fields:
+                column1:
+                  fields:
+                    header.facebook:
+                      type: text
+                      label: Facebook
+                    header.instagram:
+                      type: text
+                      label: Instagram
+                    header.id:
+                      type: text
+                      label: Facebook Id

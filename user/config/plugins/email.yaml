@@ -1,5 +1,6 @@
 enabled: true
-from: gael.buchy@icloud.com
+from: estudionow.here@gmail.com
+from_name: ' Estudio Now-Here'
 to: gaelfr67@gmail.com
 mailer:
   engine: smtp
