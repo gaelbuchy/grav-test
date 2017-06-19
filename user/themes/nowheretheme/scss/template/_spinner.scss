@@ -1,8 +1,12 @@
 
 .spinner {
-	margin: 100px auto 0;
-	width: 70px;
+	margin: 45px 0 0 0;
+	width: 80px;
 	text-align: center;
+
+	@media (max-width: 768px) {
+		margin: 75px auto 0;
+	}
 
 	& > div {
 		width: 18px;

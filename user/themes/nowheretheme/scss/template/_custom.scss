@@ -245,22 +245,32 @@ body{
     		line-height: 32px;
 
     		& > span {
+
+          line-height: 30px;
     			a{
-    				margin-right: 20px;
+    				margin-right: 15px;
+            display: inline-block;
+            vertical-align: middle;
     			}
     			img {
-    				width: 30px;
+    				// width: 30px;
     				height: 30px;
+            // &.fb, &.in{
+              // width: 30
+            // }
     			}
     			img, span{
-    				vertical-align: middle;
+    				// vertical-align: middle;
     			}
     		}
+
+
 
     		@media (max-width: 768px) {
     			padding: 30px;
     			text-align: center;
-			}
+          font-size: 22px;
+        }
     	}
     }
 }

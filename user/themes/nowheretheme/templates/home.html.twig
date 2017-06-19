@@ -12,11 +12,22 @@
 	    	Contacto:<br>
 	    	Celular: {{ site.contact.phone }}<br>
 	    	Correo: <a href="mailto:estudionow.here@gmail.com">{{ site.contact.email }}</a><br>
-	    	<span class="socials"><a target="_blank" href="{{ page.header.facebook }}" class="fb"><img alt="nowhere-facebook" src="{{ url("theme://assets/fb.png") }}"></a><a target="_blank" href="{{ page.header.instagram }}" class="in"><img alt="nowhere-instagram" src="{{ url("theme://assets/in.png") }}"></a> <span>{{ page.header.id }}</span></span>
+	    	<span class="socials">
+	    		<a target="_blank" href="{{ page.header.facebook }}" class="fb">
+	    			<img alt="nowhere-facebook" src="{{ url("theme://assets/fb.png") }}">
+    			</a>
+    			<a target="_blank" href="{{ page.header.instagram }}" class="in">
+    				<img alt="nowhere-instagram" src="{{ url("theme://assets/in.png") }}">
+				</a>
+				<a target="_blank" href="{{ page.header.behance }}" class="behance">
+    				<img alt="nowhere-behance" src="{{ url("theme://assets/behance.png") }}">
+				</a>
+				<span>{{ page.header.id }}</span>
+			</span>
 	    </div>
 	</div>
 	<div class="row">
-	    <div class="col col-12">
+	    <div class="col col-6"></div><div class="col col-6">
 	    	<div class="spinner">
 			  <div class="bounce1"></div>
 			  <div class="bounce2"></div>

@@ -168,22 +168,27 @@ body.home-page {
     font-family: ElliotSansMedium;
     font-size: 30px;
     line-height: 32px; }
-    body.home-page .contact > span a {
-      margin-right: 20px; }
-    body.home-page .contact > span img {
-      width: 30px;
-      height: 30px; }
-    body.home-page .contact > span img, body.home-page .contact > span span {
-      vertical-align: middle; }
+    body.home-page .contact > span {
+      line-height: 30px; }
+      body.home-page .contact > span a {
+        margin-right: 15px;
+        display: inline-block;
+        vertical-align: middle; }
+      body.home-page .contact > span img {
+        height: 30px; }
     @media (max-width: 768px) {
       body.home-page .contact {
         padding: 30px;
-        text-align: center; } }
+        text-align: center;
+        font-size: 22px; } }
 
 .spinner {
-  margin: 100px auto 0;
-  width: 70px;
+  margin: 45px 0 0 0;
+  width: 80px;
   text-align: center; }
+  @media (max-width: 768px) {
+    .spinner {
+      margin: 75px auto 0; } }
   .spinner > div {
     width: 18px;
     height: 18px;
