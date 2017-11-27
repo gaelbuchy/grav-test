@@ -30,63 +30,31 @@
     <body class="{{ page.header.body_classes }}">
 
         {% block header %}
-        <div id="header">
-            <div class="container">
-                <div class="container-inner">
-                    <div class="row">                
-                        <div class="col col-4">
-                            <a class="nav-toggle" href="#"><i class="kube- h3"></i></a>
-                            <a class="logo" href="{{ base_url_absolute }}"><h2>{{ site.title }}</h2></a>
-                        </div>
-                        <div class="col col-8 text-right menu">{% include 'partials/navigation.html.twig' %}</div>
-                    </div>        
-                </div>
-            </div>
-        </div>  
+          {% include 'partials/header.html.twig' %}
         {% endblock %}
 
-
         {% block body %}
-
             <div class="container main-page-container">
-                <div class="container-inner">                    
+                <div class="container-inner">
                     {% block content %}{% endblock %}
                 </div>
             </div>
-
         {% endblock %}
 
         {% block footer %}
         <footer>
             <div class="container">
-                <div class="container-inner"> 
-                    <div class="row h3">                
-                        <div class="col col-6 address">                            
-                            {{ site.contact.address|nl2br }}                            
-                        </div>
-
-                        <div class="col col-6 contact">
-                            <ul class="unstyled">
-                                <li>{{ site.contact.phone }}</li>
-                                <li>{{ site.contact.email }}</li>
-                                <li>{{ site.social.instagram }}</li>
-                            </ul>                                                                     
-                        </div>                    
+                <div class="container-inner">
+                    <div class="row h3">
+                      {% block footer_content %}
+                      {% endblock %}
                     </div>
                 </div>
             </div>
         </footer>
-
-        <script>
-          var nav = responsiveNav(".nav-collapse", {
-            customToggle: ".nav-toggle"
-          });
-
-            {% set background = page.header.background_color|default(white) %}
-          $('body').css('background-color', '{{ background }}');
-        </script>
-
         {% endblock %}
 
+        {% block js %}
+        {% endblock %}
     </body>
 </html>

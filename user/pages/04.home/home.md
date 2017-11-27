@@ -1,5 +1,6 @@
 ---
 title: Home
+published: false
 body_classes: home-page
 facebook: 'https://www.facebook.com/estudionow.here'
 instagram: 'https://www.instagram.com/estudionow.here'

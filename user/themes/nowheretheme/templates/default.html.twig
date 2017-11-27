@@ -1,8 +1,14 @@
 {% extends 'partials/base.html.twig' %}
+
+{% block header %}
+	{% include 'partials/header_simple.html.twig' %}
+{% endblock %}
+
 {% block content %}
-
-	<div class="main-content">
+	<div class="main-content row align-center">
+		<div class="col col-10">
+			<h1 class="title">Now-<br>Here.</h1>
    		{{ page.content }}
+		</div>
 	</div>
-
 {% endblock %}

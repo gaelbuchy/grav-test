@@ -1,11 +1,15 @@
 {% extends 'partials/base.html.twig' %}
 
+{% block header %}
+	{% include 'partials/header_simple.html.twig' %}
+{% endblock %}
+
 {% block content %}
 
   <header>
     <h2>{{ page.header.title }}</h2>
   </header>
-  
+
   {{ content }}
 
   {% include "forms/form.html.twig" %}

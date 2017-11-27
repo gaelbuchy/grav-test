@@ -13,7 +13,6 @@
 {% endif  %}
 
 {% block content %}
-
 <div class="portfolio-grid">
   {% for child in collection %}
     {% if loop.index is odd %}
@@ -30,7 +29,29 @@
       </div>
     {% endif %}
   {% endfor %}
+</div>
 {% endblock %}
 
 
+{% block footer_content %}
+  <div class="col col-6 push-right push-bottom socials">
+    <a target="_blank" href="{{ config.site.header.facebook }}" class="fb">
+      <img alt="nowhere-facebook" src="{{ url("theme://assets/fb_b.png") }}">
+    </a>
+    <a target="_blank" href="{{ config.site.header.instagram }}" class="in">
+      <img alt="nowhere-instagram" src="{{ url("theme://assets/in_b.png") }}">
+    </a>
+    <a target="_blank" href="{{ config.site.header.behance }}" class="behance">
+      <img alt="nowhere-behance" src="{{ url("theme://assets/behance_b.png") }}">
+    </a>
+  </div>
+{% endblock %}
 
+
+{% block js %}
+<script>
+  var nav = responsiveNav(".nav-collapse", {
+    customToggle: ".nav-toggle"
+  });
+</script>
+{% endblock %}

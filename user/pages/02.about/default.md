@@ -1,18 +1,17 @@
 ---
 title: About
-published: false
+published: true
 background_color: 'rgba(220, 227, 184, 1.00)'
+menu: Nosotros
 route: about
 ---
-
-### Studio
 
 Mildred & Duck is a Melbourne-based graphic design and communication studio established by Sigiriya Brown and Daniel Smith. We design for print, digital and environmental media, creating solutions that communicate and connect with people.
 
 We work across a variety of sectors with a range of clients, from startups to established organisations, continually delivering thoughtfully crafted outcomes regardless of scope or budget. The small size of our team allows us to be flexible and take care of every single detail during the design process, ensuring a high level of execution no matter the scale of the project.
 
 
-### Services
+### Servicios
 
 We apply design thinking to every situation and always welcome new challenges. Some of the services we perform most often include:
 

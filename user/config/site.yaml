@@ -2,8 +2,8 @@ title: Now-here
 default_lang: es
 author:
   name: NowHere
-  email: estudionow.here@gmail.com
-  url: www.google.fr
+  email: contacto@estudionow-here.mx
+  url: 'http://estudionow-here.mx/'
 taxonomies:
   - category
   - tag
@@ -17,8 +17,11 @@ summary:
 blog:
   route: /blog
 contact:
-  address: "Suite 306\n37 Swanston Street\nMelbourne VIC 3000"
-  phone: (999) 114-6345
-  email: estudionow.here@gmail.com
-social:
-  instagram: dedwed.fr
+  address: Mérida
+  phone: '(999) 114-6345'
+  email: contacto@estudionow-here.mx
+header:
+  facebook: 'https://www.facebook.com/estudionow.here'
+  instagram: 'https://www.instagram.com/estudionow.here'
+  behance: 'https://www.behance.net/estudionow-here'
+  id: estudionow.here

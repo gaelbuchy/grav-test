@@ -1,8 +1,8 @@
 ---
 title: Works
-published: false
+published: true
 background_color: '#ffffff'
-menu: Works
+menu: Proyectos
 blog_url: works
 sitemap:
     changefreq: monthly

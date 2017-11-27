@@ -13,6 +13,8 @@ use RocketTheme\Toolbox\Event\Event;
 
 class Form extends Iterator implements \Serializable
 {
+    const BYTES_TO_MB = 1048576;
+
     /**
      * @var string
      */
@@ -377,7 +379,7 @@ class Form extends Iterator implements \Serializable
              'random_name' => $config->get('plugins.form.files.random_name', false),
              'accept' => $config->get('plugins.form.files.accept', ['image/*']),
              'limit' => $config->get('plugins.form.files.limit', 10),
-             'filesize' => $config->get('plugins.form.files.filesize', 5242880) // 5MB
+             'filesize' => $this->getMaxFilesize(),
             ],
             (array) $settings,
             ['name' => $post['name']]
@@ -416,7 +418,7 @@ class Form extends Iterator implements \Serializable
         }
 
         // Handle file size limits
-        $settings->filesize *= 1048576; // 2^20 [MB in Bytes]
+        $settings->filesize *= self::BYTES_TO_MB; // 1024 * 1024 [MB in Bytes]
         if ($settings->filesize > 0 && $upload->file->size > $settings->filesize) {
             // json_response
             return [
@@ -613,54 +615,12 @@ class Form extends Iterator implements \Serializable
                     $grav->fireEvent('onFormProcessed', $event);
                 }
             }
-        } else {
-            // Default action.
         }
     }
 
     public function getPagePathFromToken($path)
     {
-        $grav = Grav::instance();
-
-        $path_parts = pathinfo($path);
-
-        $basename = '';
-        if (isset($path_parts['extension'])) {
-            $basename = '/' . $path_parts['basename'];
-            $path = $path_parts['dirname'];
-        }
-
-        $regex = '/(@self|self@)|((?:@page|page@):(?:.*))|((?:@theme|theme@):(?:.*))/';
-        preg_match($regex, $path, $matches);
-
-        if ($matches) {
-            if ($matches[1]) {
-                // self@
-                $page = $this->page(true);
-            } elseif ($matches[2]) {
-                // page@
-                $parts = explode(':', $path);
-                $route = $parts[1];
-                $page = $grav['page']->find($route);
-            } elseif ($matches[3]) {
-                // theme@
-                $parts = explode(':', $path);
-                $route = $parts[1];
-                $theme = str_replace(ROOT_DIR, '', $grav['locator']->findResource("theme://"));
-
-                return $theme . $route . $basename;
-            }
-        } else {
-            return $path . $basename;
-        }
-
-        if (!$page) {
-            throw new \RuntimeException('Page route not found: ' . $path);
-        }
-
-        $path = str_replace($matches[0], rtrim($page->relativePagePath(), '/'), $path);
-
-        return $path . $basename;
+        return Utils::getPagePathFromToken($path, $this->page());
     }
 
     /**
@@ -688,9 +648,37 @@ class Form extends Iterator implements \Serializable
         return $files;
     }
 
+    /**
+     * Get the nonce for a form
+     *
+     * @return string
+     */
     public static function getNonce()
     {
         $action = 'form-plugin';
         return Utils::getNonce($action);
+    }
+
+    /**
+     * Get the configured max file size in bytes
+     *
+     * @param bool $mbytes return size in MB
+     * @return int
+     */
+    public static function getMaxFilesize($mbytes = false)
+    {
+        $config = Grav::instance()['config'];
+
+        $filesize_mb = $config->get('plugins.form.files.filesize', 0) * static::BYTES_TO_MB;
+        $system_filesize = $config->get('system.media.upload_limit', 0);
+        if ($filesize_mb > $system_filesize || $filesize_mb == 0) {
+            $filesize_mb = $system_filesize;
+        }
+
+        if ($mbytes) {
+            return $filesize_mb;
+        }
+
+        return $filesize_mb  / static::BYTES_TO_MB;
     }
 }

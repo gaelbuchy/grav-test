@@ -1,0 +1,38 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block header %}
+	{% include 'partials/header_simple.html.twig' %}
+{% endblock %}
+
+{% block content %}
+	<div class="main-content row align-center">
+		<div class="col col-10">
+			<h1 class="title">Now-<br>Here.</h1>
+
+			<div>
+   			{{ page.content }}
+			</div>
+
+			<div class="contact-info">
+				C. {{ config.site.contact.phone }}<br>
+				D. {{ config.site.contact.address }}<br><br>
+				{{ config.site.contact.email }}
+			</div>
+
+
+			<div class="socials">
+				<a target="_blank" href="{{ config.site.header.facebook }}" class="fb">
+					<img alt="nowhere-facebook" src="{{ url("theme://assets/fb_b.png") }}">
+				</a>
+				<a target="_blank" href="{{ config.site.header.instagram }}" class="in">
+					<img alt="nowhere-instagram" src="{{ url("theme://assets/in_b.png") }}">
+				</a>
+				<a target="_blank" href="{{ config.site.header.behance }}" class="behance">
+					<img alt="nowhere-behance" src="{{ url("theme://assets/behance_b.png") }}">
+				</a>
+			</div>
+
+		</div>
+
+	</div>
+{% endblock %}

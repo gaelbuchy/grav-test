@@ -1,0 +1,96 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block header %}
+{% endblock %}
+
+{% block body %}
+		<section class="background-section background-section-image" style="top:0px;background-image:url('{{ (page.media.images|first).url }}')"></section>
+		<section class="background-section background-section-links"><a class="logo colored-link colored-link-white" href="{{ base_url_absolute }}"></a><a class="back colored-link colored-link-white" href="{{ base_url_absolute }}"></a></section>
+		<div class="container work-page-container">
+				<div class="container-inner">
+					<div class="main-content">
+
+						<div class="row align-center">
+
+							<div class="col col-10 work-page-content">
+								<h1>{{ page.title }}</h1>
+								<div class="description">
+									<a href="#" class="toggle"><span class="toggle-content">+ Mas info</span><span class="toggle-content" style="display:none;">- Menos info</span></a>
+									<div class="description-content" style="display:none;">{{ page.content }}</div>
+								</div>
+
+								<div class="work-media-grid row align-center around">
+									{% for img in page.media.images %}
+										{% if loop.index0 %}
+											<div class="col {{ img.width > 700 ? 'col-12' : 'col-6' }}"><img src="{{ img.url }}"></div>
+										{% endif %}
+									{% endfor %}
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
+
+			</div>
+		</div>
+{% endblock %}
+
+
+
+{% block js %}
+
+<script type="text/javascript">
+
+	$(document).ready(function(){
+
+			function getLinkColor(c){
+
+				switch (c) {
+					case 'blue':
+						return 'red';
+						break;
+					case 'white':
+						return 'blue';
+						break;
+					default:
+						return 'white';
+						break;
+				}
+			}
+
+			var colors = ['blue', 'red', 'green'];
+			var total_height = $(document).height();
+			var window_height = $(window).height();
+
+			var index = 0;
+			var needWhite = false;
+			var temp = window_height;
+			while(temp < total_height){
+				limitHeight = false;
+				if(temp > total_height-window_height){
+					limitHeight = true;
+				}
+				var color = needWhite ? 'white' : colors[index];
+				var style = 'style="top:'+temp+'px;'+(limitHeight?'height:'+(total_height-temp+200)+'px':'')+'"';
+				$('body').append('<section class="background-section background-section-'+color+'" '+style+'></section><section class="hide-sm background-section background-section-links" '+style+'><a class="logo colored-link colored-link-'+getLinkColor(color)+'" href="{{ base_url_absolute }}"></a><a class="back colored-link colored-link-'+getLinkColor(color)+'" href="{{ base_url_absolute }}"></a></section>')
+				temp += window_height;
+
+				// update index
+				index = (index == colors.length - 1) ? 0 : index+1;
+				// toggle need white
+				needWhite = !needWhite;
+			}
+
+			$('.work-page-content').append('<a class="last-close-link colored-link colored-link-'+getLinkColor(color)+' back" href="{{ base_url_absolute }}"></a>');
+
+		$('.description').on('click', '.toggle', function(e){
+			e.preventDefault();
+			$('.toggle-content').toggle();
+			$(".description-content").slideToggle('fast');
+		})
+	});
+</script>
+
+{% endblock %}

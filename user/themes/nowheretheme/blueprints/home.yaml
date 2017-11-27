@@ -16,15 +16,3 @@ form:
               fields:
                 column1:
                   fields:
-                    header.facebook:
-                      type: text
-                      label: Facebook
-                    header.instagram:
-                      type: text
-                      label: Instagram
-                    header.behance:
-                      type: text
-                      label: Behance
-                    header.id:
-                      type: text
-                      label: Facebook Id
