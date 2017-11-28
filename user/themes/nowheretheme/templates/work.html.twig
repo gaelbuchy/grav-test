@@ -60,6 +60,8 @@
 				}
 			}
 
+		$( window ).load(function() {
+
 			var colors = ['blue', 'red', 'green'];
 			var total_height = $(document).height();
 			var window_height = $(window).height();
@@ -84,6 +86,7 @@
 			}
 
 			$('.work-page-content').append('<a class="last-close-link colored-link colored-link-'+getLinkColor(color)+' back" href="{{ base_url_absolute }}"></a>');
+		});
 
 		$('.description').on('click', '.toggle', function(e){
 			e.preventDefault();
