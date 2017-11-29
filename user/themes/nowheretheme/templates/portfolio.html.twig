@@ -18,7 +18,7 @@
     {% if loop.index is odd %}
       <div class="row">
     {% endif %}
-      <div class="col col-6">
+      <div class="col {{ collection.length > 1 ? 'col-6' : 'col-12' }}">
         <a href="{{ child.url }}">
           <img src="{{ (child.media.images|first).url }}" alt="{{ child.title }}">
 
@@ -36,13 +36,10 @@
 {% block footer_content %}
   <div class="col col-6 push-right push-bottom socials">
     <a target="_blank" href="{{ config.site.header.facebook }}" class="fb">
-      <img alt="nowhere-facebook" src="{{ url("theme://assets/fb_b.png") }}">
     </a>
     <a target="_blank" href="{{ config.site.header.instagram }}" class="in">
-      <img alt="nowhere-instagram" src="{{ url("theme://assets/in_b.png") }}">
     </a>
     <a target="_blank" href="{{ config.site.header.behance }}" class="behance">
-      <img alt="nowhere-behance" src="{{ url("theme://assets/behance_b.png") }}">
     </a>
   </div>
 {% endblock %}

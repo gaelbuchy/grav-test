@@ -286,7 +286,7 @@ footer{
 
   .contact-info{
     font-size: 32px;
-    line-height: 36p;
+    line-height: 36px;
     margin-bottom: 50px;
   }
 
@@ -354,15 +354,35 @@ section.background-section{
     display: inline-block;
     vertical-align: middle;
 
-    &:hover{
-      img{
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+
+    @include background-cover;
+    // -webkit-transition: .1s ease-in;
+    // transition: .1s ease-in;
+
+    &.fb{
+      background-image: url('/user/themes/nowheretheme/assets/fb_b.png');
+      &:hover{
+        background-image: url('/user/themes/nowheretheme/assets/fb.png');
+      }
+    }
+    &.in{
+      background-image: url('/user/themes/nowheretheme/assets/in_b.png');
+      &:hover{
+        background-image: url('/user/themes/nowheretheme/assets/in.png');
+      }
+    }
+    &.behance{
+      width: 160px;
+      background-image: url('/user/themes/nowheretheme/assets/behance_b.png');
+      &:hover{
+        background-image: url('/user/themes/nowheretheme/assets/behance.png');
       }
     }
   }
+
   img {
     height: 30px;
     .behance{
