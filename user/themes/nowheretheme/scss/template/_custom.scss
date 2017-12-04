@@ -15,14 +15,14 @@
 //   font-family: 'PoppinsMedium';
 //   src: url('../fonts/ElliotSans-Medium.ttf') format('truetype')
 // }
-// @font-face {
-//   font-family: 'ElliotSansBold';
-//   src: url('../fonts/ElliotSans-Bold.ttf') format('truetype')
-// }
-// @font-face {
-//   font-family: 'ElliotSansBoldI';
-//   src: url('../fonts/ElliotSans-BoldItalic.ttf') format('truetype')
-// }
+@font-face {
+  font-family: 'ElliotSansBold';
+  src: url('../fonts/ElliotSans-Bold.ttf') format('truetype')
+}
+@font-face {
+  font-family: 'ElliotSansBoldI';
+  src: url('../fonts/ElliotSans-BoldItalic.ttf') format('truetype')
+}
 
 @mixin background-cover() {
   background-repeat: no-repeat;
@@ -46,6 +46,10 @@ body{
 
   h1, h1.title, h2, h3, h4, h5, h6 {
     color: $primary-color;
+  }
+
+  h1.title, h2.title{
+    font-family: 'ElliotSansBold';
   }
 }
 
@@ -73,10 +77,14 @@ a:active  {
 
 a.colored-link{
   width: 60px;
-  display: block;
+  display: inline-block;
   @include background-cover;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
+
+  @media (max-width: 768px) {
+    width: 30px;
+  }
 
   &.back:hover{
     // -webkit-filter: grayscale(100%);
@@ -89,6 +97,9 @@ a.colored-link{
 
   &.back{
     height: 60px;
+    @media (max-width: 768px) {
+      height: 30px;
+    }
 
     &.colored-link-blue{
       background-image: url('/user/themes/nowheretheme/assets/close_b.png');
@@ -102,6 +113,10 @@ a.colored-link{
   }
   &.logo{
     height: 71px;
+    @media (max-width: 768px) {
+      height: 37px;
+    }
+
     &.colored-link-blue{
       background-image: url('/user/themes/nowheretheme/assets/logo_b.png');
     }
@@ -151,12 +166,13 @@ a.colored-link{
     .work-media-grid {
       // @include grid-media-columns(2);
       & > div {
-          text-align: center
+          text-align: center;
+          margin-bottom: 25px;
       }
     }
 
     .last-close-link{
-      width: 60px;
+      // width: 60px;
       display: block;
       margin: auto;
       margin-top: 100px;
@@ -201,10 +217,17 @@ a.colored-link{
 	// border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 	position: fixed;
 	width: 100%;
-	z-index: 999;
+	z-index: 1001;
 
   &.header-simple{
     // position: relative;
+    background: transparent;
+
+    .container-inner{
+    	@include breakpoint(768px) {
+    		padding: 35px 3% 25px 3%;
+    	}
+    }
   }
 	h2, li.h2{
 		// font-family: ElliotSans;
@@ -239,10 +262,13 @@ a.colored-link{
       padding-top: 28px;
 			ul{
 				li{
-	    			display: inline;
-	    			a{
-	    				margin-left: 40px;
-	    			}
+    			display: inline;
+    			a{
+    				margin-left: 40px;
+    			}
+          &.h2{
+            font-size: 26px;
+          }
 				}
 			}
 		}
@@ -283,11 +309,23 @@ footer{
     line-height: 90px;
     margin-bottom: 50px;
   }
-
-  .contact-info{
-    font-size: 32px;
-    line-height: 36px;
+  h2.title{
+    font-size: 50px;
+    line-height: 60px;
     margin-bottom: 50px;
+  }
+
+  &.main-content-contact{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 20px;
+
+    .contact-info{
+      font-size: 22px;
+      line-height: 28px;
+      margin-bottom: 50px;
+    }
   }
 
 }
@@ -355,8 +393,8 @@ section.background-section{
     vertical-align: middle;
 
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
 
     @include background-cover;
     // -webkit-transition: .1s ease-in;
@@ -375,18 +413,11 @@ section.background-section{
       }
     }
     &.behance{
-      width: 160px;
+      width: 130px;
       background-image: url('/user/themes/nowheretheme/assets/behance_b.png');
       &:hover{
         background-image: url('/user/themes/nowheretheme/assets/behance.png');
       }
-    }
-  }
-
-  img {
-    height: 30px;
-    .behance{
-      height: 26px;
     }
   }
 
