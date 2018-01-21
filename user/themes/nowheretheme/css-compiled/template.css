@@ -17,6 +17,17 @@ input, textarea, select {
 @font-face {
   font-family: 'ElliotSansBoldI';
   src: url("../fonts/ElliotSans-BoldItalic.ttf") format("truetype"); }
+a {
+  transition: color .2s;
+  color: #036B89;
+  text-decoration: none; }
+
+a:hover {
+  color: #F1E1BF; }
+
+a:active {
+  transition: color .2s; }
+
 /** GENERAL **/
 body {
   color: #036B89;
@@ -28,6 +39,14 @@ body {
     color: #036B89; }
   body h1.title, body h2.title {
     font-family: 'ElliotSansBold'; }
+  body.background-primary {
+    background: #036B89; }
+    body.background-primary, body.background-primary h1, body.background-primary h1.title, body.background-primary h2, body.background-primary h3, body.background-primary h4, body.background-primary h5, body.background-primary h6, body.background-primary a {
+      color: #F1E1BF; }
+  body.background-secondary {
+    background: #F1E1BF; }
+    body.background-secondary, body.background-secondary h1, body.background-secondary h1.title, body.background-secondary h2, body.background-secondary h3, body.background-secondary h4, body.background-secondary h5, body.background-secondary h6, body.background-secondary a {
+      color: #036B89; }
 
 .centered {
   position: fixed;
@@ -35,17 +54,6 @@ body {
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%); }
-
-a {
-  transition: color .2s;
-  color: #036B89;
-  text-decoration: none; }
-
-a:hover {
-  color: #C14426; }
-
-a:active {
-  transition: color .2s; }
 
 a.colored-link {
   width: 60px;
@@ -101,10 +109,6 @@ a.colored-link {
     .container.work-page-container .work-page-content {
       z-index: 1000;
       margin-top: 50px; }
-      .container.work-page-container .work-page-content, .container.work-page-container .work-page-content h1, .container.work-page-container .work-page-content a {
-        color: #C14426; }
-      .container.work-page-container .work-page-content a:hover {
-        color: #036B89; }
     .container.work-page-container .description {
       margin: 30px 0; }
     @media (min-width: 768px) {
@@ -142,7 +146,6 @@ a.colored-link {
   .js .nav-collapse.closed {
     max-height: none; } }
 #header {
-  background: white;
   position: fixed;
   width: 100%;
   z-index: 1001; }
@@ -208,41 +211,16 @@ a.colored-link {
       line-height: 28px;
       margin-bottom: 50px; }
 
-section.background-section {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1; }
-  section.background-section.background-section-links {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    z-index: 999; }
-    section.background-section.background-section-links a {
-      position: absolute;
-      top: 30px; }
-      section.background-section.background-section-links a.logo {
-        left: 30px; }
-      section.background-section.background-section-links a.back {
-        right: 30px; }
-  section.background-section.background-section-image {
-    background-repeat: no-repeat;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    position: relative;
-    height: 100vh;
-    width: 100vw; }
-  section.background-section.background-section-white {
-    background: white; }
-  section.background-section.background-section-blue {
-    background: #C4D3D7; }
-  section.background-section.background-section-red {
-    background: #C14426; }
-  section.background-section.background-section-green {
-    background: #036B89; }
+section.background-section.background-section-image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  width: 100vw; }
 
 .row.row-xs {
   flex-direction: row; }
@@ -262,16 +240,16 @@ section.background-section {
   -o-background-size: cover;
   background-size: cover; }
   .socials a.fb {
-    background-image: url("/user/themes/nowheretheme/assets/fb_b.png"); }
+    background-image: url("/user/themes/nowheretheme/assets/fb.png"); }
     .socials a.fb:hover {
       background-image: url("/user/themes/nowheretheme/assets/fb.png"); }
   .socials a.in {
-    background-image: url("/user/themes/nowheretheme/assets/in_b.png"); }
+    background-image: url("/user/themes/nowheretheme/assets/in.png"); }
     .socials a.in:hover {
       background-image: url("/user/themes/nowheretheme/assets/in.png"); }
   .socials a.behance {
     width: 130px;
-    background-image: url("/user/themes/nowheretheme/assets/behance_b.png"); }
+    background-image: url("/user/themes/nowheretheme/assets/behance.png"); }
     .socials a.behance:hover {
       background-image: url("/user/themes/nowheretheme/assets/behance.png"); }
 @media (max-width: 768px) {
@@ -291,7 +269,6 @@ footer .socials {
   .portfolio-grid .col a {
     display: block;
     position: relative;
-    border: 1px solid #f3f3f3;
     height: 100%;
     text-align: center; }
     .portfolio-grid .col a img {

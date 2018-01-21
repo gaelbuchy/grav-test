@@ -1,7 +1,9 @@
+{% set body_classes = "background-secondary" %}
+
 {% extends 'partials/base.html.twig' %}
 
 {% block header %}
-	{% include 'partials/header_simple.html.twig' with {linkColor: 'white'} %}
+	{% include 'partials/header_simple.html.twig' with {linkColor: 'blue'} %}
 {% endblock %}
 
 {% block body %}
@@ -45,41 +47,41 @@
 
 	$(document).ready(function(){
 
-			function getLinkColor(c, returnClass){
-				switch (c) {
-					case '#036B89':
-						return 'white';
-					break;
-					case '#C14426':
-						return 'white';
-						break;
-					case '#C4D3D7':
-						return returnClass ? 'red' : '#C14426';
-						break;
-					default:
-						return returnClass ? 'blue' : '#036B89';
-						break;
-				}
-			}
-
-			var windowHeight = $(window).height();
-			var colors = ['#C4D3D7', '#C14426', 'white', '#036B89'];
-
-			$( window ).resize(function() {
-				windowHeight = $(window).height();
-			});
-
-			$( window ).scroll(function() {
-				var scrollTop = $(document).scrollTop();
-				var index = Math.floor(scrollTop/(windowHeight*1.5))%colors.length;
-
-				if(!$('.description-content').is(":visible") ||  !$('.description-content').visible(true)){
-					$('body').css("background-color", colors[index]);
-					$('.work-page-content').css('color', getLinkColor(colors[index], false));
-					$('.header-simple .logo.colored-link').attr('class', 'logo colored-link colored-link-'+getLinkColor(colors[index], true));
-					$('.header-simple .back.colored-link').attr('class', 'back colored-link colored-link-'+getLinkColor(colors[index], true));
-				}
-			});
+//			function getLinkColor(c, returnClass){
+//				switch (c) {
+//					case '#036B89':
+//						return 'white';
+//					break;
+//					case '#C14426':
+//						return 'white';
+//						break;
+//					case '#C4D3D7':
+//						return returnClass ? 'red' : '#C14426';
+//						break;
+//					default:
+//						return returnClass ? 'blue' : '#036B89';
+//						break;
+//				}
+//			}
+//
+//			var windowHeight = $(window).height();
+//			var colors = ['#C4D3D7', '#C14426', 'white', '#036B89'];
+//
+//			$( window ).resize(function() {
+//				windowHeight = $(window).height();
+//			});
+//
+//			$( window ).scroll(function() {
+//				var scrollTop = $(document).scrollTop();
+//				var index = Math.floor(scrollTop/(windowHeight*1.5))%colors.length;
+//
+//				if(!$('.description-content').is(":visible") ||  !$('.description-content').visible(true)){
+//					$('body').css("background-color", colors[index]);
+//					$('.work-page-content').css('color', getLinkColor(colors[index], false));
+//					$('.header-simple .logo.colored-link').attr('class', 'logo colored-link colored-link-'+getLinkColor(colors[index], true));
+//					$('.header-simple .back.colored-link').attr('class', 'back colored-link colored-link-'+getLinkColor(colors[index], true));
+//				}
+//			});
 
 			$('.description').on('click', '.toggle', function(e){
 				e.preventDefault();

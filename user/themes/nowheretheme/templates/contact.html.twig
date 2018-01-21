@@ -1,7 +1,9 @@
+{% set body_classes = "background-primary" %}
+
 {% extends 'partials/base.html.twig' %}
 
 {% block header %}
-	{% include 'partials/header_simple.html.twig' %}
+	{% include 'partials/header_simple.html.twig' with {linkColor: 'white'} %}
 {% endblock %}
 
 {% block body %}

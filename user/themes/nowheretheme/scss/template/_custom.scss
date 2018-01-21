@@ -34,8 +34,20 @@
 }
 
 $primary-color: #036B89;
-$secondary-color: #C14426;
-$tertiary_color: #C4D3D7;
+$secondary-color: #F1E1BF;
+
+a {
+  transition: color .2s;
+  color: $primary-color;
+  text-decoration: none;
+}
+// a:link,
+// a:visited { color: black; }
+a:hover   { color: $secondary-color; }
+a:active  {
+  transition: color .2s;
+  // color: #007BE6;
+}
 
 /** GENERAL **/
 body{
@@ -51,6 +63,21 @@ body{
   h1.title, h2.title{
     font-family: 'ElliotSansBold';
   }
+
+  &.background-primary{
+    background: $primary-color;
+
+    &, h1, h1.title, h2, h3, h4, h5, h6, a {
+      color: $secondary-color;
+    }
+  }
+  &.background-secondary{
+    background: $secondary-color;
+
+    &, h1, h1.title, h2, h3, h4, h5, h6, a {
+      color: $primary-color;
+    }
+  }
 }
 
 .centered {
@@ -61,19 +88,7 @@ body{
   transform: translate(-50%, -50%);
 }
 
-a {
-  transition: color .2s;
-  color: $primary-color;
-  text-decoration: none;
-}
 
-// a:link,
-// a:visited { color: black; }
-a:hover   { color: $secondary-color; }
-a:active  {
-  transition: color .2s;
-  // color: #007BE6;
-}
 
 a.colored-link{
   width: 60px;
@@ -146,13 +161,6 @@ a.colored-link{
     .work-page-content{
       z-index: 1000;
       margin-top: 50px;
-
-      &, h1, a{
-        color: $secondary_color;
-      }
-      a:hover{
-        color: $primary_color;
-      }
     }
     .description{
       margin: 30px 0;
@@ -213,7 +221,6 @@ a.colored-link{
 }
 
 #header{
-	background: white;
 	// border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 	position: fixed;
 	width: 100%;
@@ -331,32 +338,32 @@ footer{
 }
 
 section.background-section{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-
-  &.background-section-links{
-    width: 100%;
-    position: absolute;
-    top:0;
-    z-index: 999;
-
-    a{
-      position: absolute;
-      top:30px;
-
-      &.logo{
-        left: 30px;
-      }
-
-      &.back{
-        right: 30px;
-      }
-    }
-
-  }
-
+//  position: absolute;
+//  width: 100%;
+//  height: 100%;
+//  z-index: -1;
+//
+//  &.background-section-links{
+//    width: 100%;
+//    position: absolute;
+//    top:0;
+//    z-index: 999;
+//
+//    a{
+//      position: absolute;
+//      top:30px;
+//
+//      &.logo{
+//        left: 30px;
+//      }
+//
+//      &.back{
+//        right: 30px;
+//      }
+//    }
+//
+//  }
+//
   &.background-section-image{
     @include background-cover;
     position: relative;
@@ -365,18 +372,6 @@ section.background-section{
 
   }
 
-  &.background-section-white{
-    background: white;
-  }
-  &.background-section-blue{
-    background: $tertiary_color;
-  }
-  &.background-section-red{
-    background: $secondary_color;
-  }
-  &.background-section-green{
-    background: $primary_color;
-  }
 }
 
 
@@ -401,20 +396,20 @@ section.background-section{
     // transition: .1s ease-in;
 
     &.fb{
-      background-image: url('/user/themes/nowheretheme/assets/fb_b.png');
+      background-image: url('/user/themes/nowheretheme/assets/fb.png');
       &:hover{
         background-image: url('/user/themes/nowheretheme/assets/fb.png');
       }
     }
     &.in{
-      background-image: url('/user/themes/nowheretheme/assets/in_b.png');
+      background-image: url('/user/themes/nowheretheme/assets/in.png');
       &:hover{
         background-image: url('/user/themes/nowheretheme/assets/in.png');
       }
     }
     &.behance{
       width: 130px;
-      background-image: url('/user/themes/nowheretheme/assets/behance_b.png');
+      background-image: url('/user/themes/nowheretheme/assets/behance.png');
       &:hover{
         background-image: url('/user/themes/nowheretheme/assets/behance.png');
       }
@@ -450,7 +445,6 @@ footer{
     	a{
     		display: block;
     		position: relative;
-    		border: 1px solid #f3f3f3;
     		height: 100%;
     		text-align: center;
 
@@ -462,7 +456,7 @@ footer{
 			    opacity: 0;
 			    position: absolute;
 			    top: 0;
-          background: rgba(0, 0, 0, 0.8);
+                background: rgba(0, 0, 0, 0.8);
 			    width: 100%;
 			    height: 100%;
 			    transition: opacity .2s;

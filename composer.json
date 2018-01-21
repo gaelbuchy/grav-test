@@ -56,10 +56,6 @@
         "exclude": ["VERSION"]
     },
     "scripts": {
-      "compile": [
-          "bin/gpm install admin -y",
-          "bin/gpm install login -y"
-        ],
         "post-create-project-cmd": "bin/grav install",
         "test": "vendor/bin/codecept run unit",
         "test-windows": "vendor\\bin\\codecept run unit"
