@@ -2,5 +2,4 @@ cache/
 .sass-cache/
 vendor/
 .idea/
-system/
 user/plugins/
