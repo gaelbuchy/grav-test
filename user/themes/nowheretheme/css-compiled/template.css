@@ -28,10 +28,10 @@ body {
     color: #036B89; }
   body h1.title, body h2.title {
     font-family: 'ElliotSansBold'; }
-  body.background-primary {
+  body.background-primary, body .background-primary {
     background: #036B89; }
-    body.background-primary, body.background-primary h1, body.background-primary h1.title, body.background-primary h2, body.background-primary h3, body.background-primary h4, body.background-primary h5, body.background-primary h6, body.background-primary a {
-      color: #F1E1BF; }
+  body.background-primary, body.background-primary h1, body.background-primary h1.title, body.background-primary h2, body.background-primary h3, body.background-primary h4, body.background-primary h5, body.background-primary h6, body.background-primary a {
+    color: #F1E1BF; }
   body.background-secondary {
     background: #F1E1BF; }
     body.background-secondary, body.background-secondary h1, body.background-secondary h1.title, body.background-secondary h2, body.background-secondary h3, body.background-secondary h4, body.background-secondary h5, body.background-secondary h6, body.background-secondary a {
@@ -105,7 +105,7 @@ a.colored-link {
   max-width: 1610px;
   margin: 0px auto; }
   .container.main-page-container {
-    padding-top: 110px; }
+    padding-top: 140px; }
     @media (min-width: 768px) {
       .container.main-page-container {
         padding-top: 150px; } }

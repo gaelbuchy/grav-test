@@ -15,8 +15,8 @@
 				</h2>
 				{% if page.content %}<div>{{ page.content }}</div>{% endif %}
 				<div class="contact-info">
-					C.<ul class="inline-ul"><li>{{ config.site.contact.phone|trim }}</li>
-						<li>{{ config.site.contact.phone2|trim }}</li></ul><br>
+					C.<ul class="inline-ul"><li><a href="tel:{{ config.site.contact.phone|trim }}">{{ config.site.contact.phone|trim }}</a></li>
+						<li><a href="tel:{{ config.site.contact.phone2|trim }}">{{ config.site.contact.phone2|trim }}</a></li></ul><br>
 					{{ config.site.contact.address }}<br>
 					<a href="mailto:{{ config.site.contact.email }}">{{ config.site.contact.email }}</a>
 				</div>
