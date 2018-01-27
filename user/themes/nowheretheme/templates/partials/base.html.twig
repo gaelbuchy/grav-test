@@ -9,11 +9,11 @@
         <link rel="icon" type="image/png" href="{{ url('theme://img/favicon.png') }}" />
 
         {% block javascripts %}
-            {% do assets.add('jquery',101, {'loading':'async'}) %}
-            {% do assets.addJs('theme://js/jquery.visible.min.js', {'loading':'async'}) %}
-            {% do assets.addJs('theme://js/kube.min.js', {'loading':'async'}) %}
-            {% do assets.addJs('theme://js/responsive-nav.min.js', {'loading':'async'}) %}
-            {% do assets.addJs('theme://js/custom.js', {'loading':'async'}) %}
+            {% do assets.add('jquery',101, {'priority':105,'loading':'async'}) %}
+            {% do assets.addJs('theme://js/jquery.visible.min.js', {'priority':104,'loading':'async'}) %}
+            {% do assets.addJs('theme://js/kube.min.js', {'priority':103,'loading':'async'}) %}
+            {% do assets.addJs('theme://js/responsive-nav.min.js', {'priority':102,'loading':'async'}) %}
+            {% do assets.addJs('theme://js/custom.js', {'priority':101,'loading':'async'}) %}
         {% endblock %}
         {{ assets.js() }}
         {% block stylesheets %}
