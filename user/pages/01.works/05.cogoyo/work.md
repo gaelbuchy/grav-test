@@ -13,7 +13,7 @@ Bajo el ideal de hacer lo que les gusta, Cogoyo fue tomando forma, y se fueron u
 
 Con nuevas ideas surgieron nuevos productos que ya no solo eran artículos de moda sino que también incluían artículos para el autocultivo.
 
-Era necesario potencializar la esencia y objetivo del proyecto.<br><br>
+Era necesario potencializar la esencia y objetivo del proyecto.<br>
 
 Bajo el lema: “Hacemos que la semilla brote”, se redefinió Cogoyo. Una marca que busca promover el autocultivo, alimentar las mentes inquietas y cultivar un estilo de vida consciente. 
 
