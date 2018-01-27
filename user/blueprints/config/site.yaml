@@ -8,6 +8,9 @@ form:
                 contact.phone:
                   type: text
                   label: Phone
+                contact.phone2:
+                  type: text
+                  label: Phone
                 contact.address:
                   type: text
                   label: Address

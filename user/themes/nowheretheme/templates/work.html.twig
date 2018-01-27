@@ -3,7 +3,7 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block header %}
-	{% include 'partials/header_simple.html.twig' with {linkColor: 'blue'} %}
+	{% include 'partials/header_simple.html.twig' with {linkColor: 'white'} %}
 {% endblock %}
 
 {% block body %}
@@ -45,7 +45,29 @@
 
 <script type="text/javascript">
 
+
+
 	$(document).ready(function(){
+
+	    function updateIcons(){
+            var height = $('.background-section-image').outerHeight();
+            var scrollTop = $(window).scrollTop();
+
+            var className = scrollTop > height-50 ? 'blue' : 'white';
+
+            $('.logo.colored-link').attr('class', 'logo colored-link colored-link-'+className);
+            $('.back.colored-link').attr('class', 'back colored-link colored-link-'+className);
+		}
+
+        $( window ).resize(function() {
+            updateIcons();
+		});
+		$( window ).scroll(function() {
+            updateIcons();
+		});
+
+        updateIcons();
+
 
 //			function getLinkColor(c, returnClass){
 //				switch (c) {

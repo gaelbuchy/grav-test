@@ -5,7 +5,11 @@
               {% block header_content %}
                 <div class="col col-4">
                     <a class="nav-toggle" href="#"><i class="kube- h3"></i></a>
-                    <h1 class="title"><a class="logo" href="{{ base_url_absolute }}">Now-<br>Here</a></h1>
+                    <h1 class="title">
+                        <a class="logo" href="{{ base_url_absolute }}">
+                            <img class="main-logo" src="/user/themes/nowheretheme/assets/logo.png" alt="Now-Here." title="Now-Here.">
+                        </a>
+                    </h1>
                 </div>
                 <div class="col col-8 text-right menu">{% include 'partials/navigation.html.twig' %}</div>
               {% endblock %}

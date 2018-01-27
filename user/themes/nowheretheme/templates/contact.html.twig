@@ -3,28 +3,28 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block header %}
-	{% include 'partials/header_simple.html.twig' with {linkColor: 'white'} %}
+	{% include 'partials/header_simple.html.twig' with {linkColor: 'yellow'} %}
 {% endblock %}
 
 {% block body %}
-	<div class="main-content main-content-contact row align-center">
-		<div class="col col-8 push-middle push-center">
-			<h2 class="title">Now-<br>Here.</h2>
-			<div>{{ page.content }}</div>
-			<div class="contact-info">
-				C. {{ config.site.contact.phone }}<br>
-				D. {{ config.site.contact.address }}<br><br>
-				<a href="mailto:{{ config.site.contact.email }}">{{ config.site.contact.email }}</a>
-			</div>
+	<div class="main-content main-content-contact row align-center ">
+		<div class="col col-10 push-middle">
+			<div class="main-content-delayed">
+				<h2 class="subtitle">
+					<img class="main-logo" src="/user/themes/nowheretheme/assets/logo.png" alt="Now-Here." title="Now-Here.">
+				</h2>
+				{% if page.content %}<div>{{ page.content }}</div>{% endif %}
+				<div class="contact-info">
+					C.<ul class="inline-ul"><li>{{ config.site.contact.phone|trim }}</li>
+						<li>{{ config.site.contact.phone2|trim }}</li></ul><br>
+					{{ config.site.contact.address }}<br>
+					<a href="mailto:{{ config.site.contact.email }}">{{ config.site.contact.email }}</a>
+				</div>
 
 
-			<div class="socials">
-				<a target="_blank" href="{{ config.site.header.facebook }}" class="fb">
-				</a>
-				<a target="_blank" href="{{ config.site.header.instagram }}" class="in">
-				</a>
-				<a target="_blank" href="{{ config.site.header.behance }}" class="behance">
-				</a>
+				<div class="socials-links">
+					<a target="_blank" href="{{ config.site.header.facebook }}">Facebook</a> / <a target="_blank" href="{{ config.site.header.instagram }}">Instagram</a>  / <a target="_blank" href="{{ config.site.header.behance }}">Behance</a>
+				</div>
 			</div>
 
 		</div>

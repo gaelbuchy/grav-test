@@ -7,10 +7,12 @@
 {% endblock %}
 
 {% block content %}
-	<div class="main-content row align-center">
+	<div class="main-content row align-center main-content-delayed">
 		<div class="col col-10">
-			<h1 class="title">Now-<br>Here.</h1>
-   		{{ page.content }}
+			<h1 class="title">
+				<img class="contact-logo" src="/user/themes/nowheretheme/assets/logo_2.png" alt="We are Now- We are Here." title="We are Now- We are Here.">
+			</h1>
+   			{{ page.content }}
 		</div>
 	</div>
 {% endblock %}

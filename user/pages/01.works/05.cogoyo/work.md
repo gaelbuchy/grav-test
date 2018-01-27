@@ -1,6 +1,6 @@
 ---
 title: Cogoyo
-media_order: 'c6176959311765.5a1d9ce366530.jpg,12860e59311765.5a1d9ce3680f9.jpg,68da2e59311765.5a1d9ce36783e.jpg,e5feb059311765.5a1d9ce3684e4.png,c3d30659311765.5a1d9ce366fdd.jpg,fa62c959311765.5a1d9ce36680f.png,b227a459311765.5a1d9ce367bbc.png,8d231f59311765.5a1d9ce365f95.png,12bd3359311765.5a1d9ce368da6.png,62cc1f59311765.5a1d9ce366c2e.png,91425c59311765.5a1d9ce3689e0.png,e0b12259311765.5a1d9ce36740d.png'
+media_order: '1.jpg,5.jpg,6.jpg,2.jpg,11.jpg,3.jpg,9.jpg,13.jpg,7.jpg,12.jpg,14.jpg,10.jpg,Cartel.jpg,Logo-01-01.jpg'
 date: '11-04-2017 21:39'
 background_color: ''
 ---
@@ -13,7 +13,7 @@ Bajo el ideal de hacer lo que les gusta, Cogoyo fue tomando forma, y se fueron u
 
 Con nuevas ideas surgieron nuevos productos que ya no solo eran artículos de moda sino que también incluían artículos para el autocultivo.
 
-Era necesario potencializar la esencia y objetivo del proyecto.
+Era necesario potencializar la esencia y objetivo del proyecto.<br><br>
 
 Bajo el lema: “Hacemos que la semilla brote”, se redefinió Cogoyo. Una marca que busca promover el autocultivo, alimentar las mentes inquietas y cultivar un estilo de vida consciente. 
 
