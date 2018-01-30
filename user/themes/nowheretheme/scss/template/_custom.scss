@@ -184,8 +184,15 @@ a.colored-link{
     }
 
     .description-content{
+      text-align: justify;
+      margin-top: 15px;
       @include breakpoint(768px) {
-        column-count: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        columns: 2;
+        -webkit-column-gap: 80px;
+        -moz-column-gap: 80px;
+        column-gap: 80px;
       }
     }
     .work-media-grid {
@@ -276,7 +283,7 @@ a.colored-link{
 	// min-width
 	@include breakpoint(768px) {
 		.menu{
-      padding-top: 28px;
+      //padding-top: 28px;
 			ul{
 				li{
     			display: inline;
@@ -345,6 +352,9 @@ footer{
 
   &.main-content-delayed, .main-content-delayed{
     display: none;
+    @include breakpoint(768px) {
+      padding: 0 100px;
+    }
   }
 
   .subtitle{
@@ -406,6 +416,11 @@ section.background-section{
 
 .socials-links{
   font-size: 18px;
+
+  &.col{
+    padding: 6px;
+    margin-top: 20px;
+  }
 }
 
 .socials{

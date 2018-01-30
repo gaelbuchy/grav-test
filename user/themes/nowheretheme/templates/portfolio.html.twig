@@ -16,22 +16,28 @@
 
 {% block content %}
 
-<div class="portfolio-grid">
-  {% for child in collection %}
-    {% if loop.index is odd %}
-      <div class="row">
-    {% endif %}
-      <div class="col {{ collection|length > 1 ? 'col-6' : 'col-12' }}">
-        <a href="{{ child.url }}">
-          <img src="{{ (child.media.images|first).url }}" alt="{{ child.title }}">
-          <div class="hover-back"><div class="image-title h1">{{ child.title }}</div></div>
-        </a>
-      </div>
-     {% if loop.index is even %}
-      </div>
-    {% endif %}
-  {% endfor %}
-</div>
+    <div class="portfolio-grid">
+      {% for child in collection %}
+        {% if loop.index is odd %}
+          <div class="row">
+        {% endif %}
+          <div class="col {{ collection|length > 1 ? 'col-6' : 'col-12' }}">
+            <a href="{{ child.url }}">
+              <img src="{{ (child.media.images|first).url }}" alt="{{ child.title }}">
+              <div class="hover-back"><div class="image-title h1">{{ child.title }}</div></div>
+            </a>
+          </div>
+         {% if loop.index is even or collection|length == 1%}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="row">
+        <div class="col col-12 text-right socials-links">
+            <a target="_blank" href="{{ config.site.header.facebook }}">Facebook</a> / <a target="_blank" href="{{ config.site.header.instagram }}">Instagram</a>  / <a target="_blank" href="{{ config.site.header.behance }}">Behance</a>
+        </div>
+    </div>
+
 {% endblock %}
 
 
@@ -44,4 +50,5 @@
     {#<a target="_blank" href="{{ config.site.header.behance }}" class="behance">#}
     {#</a>#}
   {#</div>#}
+
 {% endblock %}
