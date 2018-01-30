@@ -19,11 +19,7 @@ input, textarea, select {
   src: url("../fonts/ElliotSans-BoldItalic.ttf") format("truetype"); }
 /** GENERAL **/
 body {
-  color: #036B89;
-  background: transparent;
-  transition: background-color 1s;
-  -webkit-transition: background-color 1s;
-  /* Safari */ }
+  color: #036B89; }
   body h1, body h1.title, body h2, body h3, body h4, body h5, body h6 {
     color: #036B89; }
   body h1.title, body h2.title {

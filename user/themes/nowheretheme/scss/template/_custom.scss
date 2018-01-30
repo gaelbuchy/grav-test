@@ -41,9 +41,9 @@ $tertiary-color: #c5d5d7;
 /** GENERAL **/
 body{
   color: $primary-color;
-  background: transparent;
-  transition: background-color 1s;
-  -webkit-transition: background-color 1s; /* Safari */
+  //background: transparent;
+  //transition: background-color 1s;
+  //-webkit-transition: background-color 1s; /* Safari */
 
   h1, h1.title, h2, h3, h4, h5, h6 {
     color: $primary-color;

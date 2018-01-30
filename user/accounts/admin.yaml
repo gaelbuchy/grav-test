@@ -1,14 +1,15 @@
-email: admin@admin.fr
+email: gaelfr67@gmail.com
 fullname: Admin
 title: Administrator
 state: enabled
 access:
   admin:
-    login: true
-    super: true
+    super: 'true'
+    login: 'true'
   site:
-    login: true
-hashed_password: $2y$10$ScUwX5X7Z1dEkxie3D3SDO/P2wLAY2kKSehCLDu7WnGmRYFj4/zj.
+    login: 'true'
+hashed_password: $2y$10$Yfq050TYIu0a1MuJkxNtyOgKQxFNuHBvjYSlsEryQAwUwcu6YRcoy
 language: en
 login_attempts: {  }
 twofa_secret: MQPOYYVAUI5PSU2O2SSBIK22SCEGLZNW
+twofa_enabled: false
