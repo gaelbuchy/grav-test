@@ -9,6 +9,11 @@ taxonomies:
   - tag
 metadata:
   description: 'Now-Here es un estudio creativo ubicado en Mérida, Yucatán.  Desarrollamos estrategias de comunicación para la creación y el desarrollo de proyectos culturales y comerciales, a través de diferentes disciplinas.'
+  generator: ''
+  og-title: 'Estudio Now-Here'
+  og-description: 'Now-Here es un estudio creativo ubicado en Mérida, Yucatán.  Desarrollamos estrategias de comunicación para la creación y el desarrollo de proyectos culturales y comerciales, a través de diferentes disciplinas.'
+  og-url: 'http://estudionow-here.mx'
+  og-image: 'http://estudionow-here.mx/user/themes/nowheretheme/img/share.png'
 summary:
   enabled: true
   format: short
